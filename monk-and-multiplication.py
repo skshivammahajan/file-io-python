@@ -11,6 +11,7 @@ Print the answer for each index in each line. If there is no second largest or t
 """
 from functools import reduce
 import time
+from profilehooks import coverage, profile
 
 
 # Decorator for calculating function processing time
@@ -26,7 +27,9 @@ def timeit(method):
     return wrapper
 
 
-@timeit
+# @profile
+@coverage
+# @timeit
 def calc(sample_input):
     print(-1)
     print(-1)
